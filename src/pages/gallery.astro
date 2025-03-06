@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro'
+import arrow from '../assets/arrow.svg'
+
+import '../styles/global.css'
+
+const images = [
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382012/zeiwhse3dhrriaje08py.webp',
+    alt: 'Vista de las cabañas',
+    class: 'col-span-2 row-span-2',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382012/bpqjmmgqp0jzfj4mijur.webp',
+    alt: 'Vista de las cabañas',
+    class: 'col-span-1 row-span-2 md:row-span-4 lg:col-span-2',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/un4txjkjauzccmsum9sl.webp',
+    alt: 'Vista de la piscina desde la cabaña',
+    class: 'col-span-1 row-span-1 md:row-span-2',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/l2llxupapuqhrdsqmrgs.webp',
+    alt: 'Vista del parque',
+    class: 'col-span-1 row-span-2',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/tuaooh28bzrvxvfukwar.webp',
+    alt: 'Un desayuno en el parque',
+    class: 'col-span-2 row-span-1',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/rrtyoultr61le5nj0pgh.webp',
+    alt: 'Vista del atardecer',
+    class: 'col-span-1 row-span-1 lg:row-span-2',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/dyc7x5thcxrtyq8gmbrq.webp',
+    alt: 'Una flor',
+    class: 'col-span-1 row-span-2',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/tvdyh3dz9caqsroi2v9p.webp',
+    alt: 'Un cartel de las cabañas',
+    class: 'col-span-1 row-span-1 md:col-span-2 lg:row-span-2',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382014/r8kh9zzcfgzqjzk7acus.webp',
+    alt: 'Piscina',
+    class: 'col-span-2 row-span-1',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/npldjwb3rpg8plpzkvxr.webp',
+    alt: 'Vista de la entrada a las cabañas',
+    class: 'col-span-2 row-span-1',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382014/bkiedukodxhqldagm1oy.webp',
+    alt: 'Vista de las cabañas desde la piscina',
+    class: 'col-span-1 row-span-1',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382014/pz19vpesemevawouzhs4.webp',
+    alt: 'Vista de las cabañas',
+    class: 'col-span-1 row-span-1',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382014/nd2amcbwsj0mrispte2g.webp',
+    alt: 'Un árbol en el parque',
+    class: 'col-span-1 row-span-1',
+  },
+  {
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382015/zwnihkaumrpao6jfllnj.webp',
+    alt: 'Vista del parque de las cabañas',
+    class: 'col-span-2 row-span-1 md:col-span-1 lg:col-span-3',
+  },
+]
+---
+
+<Layout title='Gallery'>
+  <div class='min-h-screen bg-white p-4 md:p-8'>
+    <div class='max-w-7xl mx-auto'>
+      <div class='mb-8'>
+        <a href='/' aria-label='Volver'>
+          <img src={arrow.src} class='w-6 h-6' />
+        </a>
+      </div>
+
+      <header class='mb-12 md:mb-16 text-center'>
+        <div class='relative inline-block'>
+          <h1 class='text-4xl md:text-5xl font-light tracking-tight'>
+            Gallery
+          </h1>
+          <div class='absolute -bottom-2 left-0 w-full h-[2px] bg-[#d1272d]'>
+          </div>
+        </div>
+      </header>
+
+      <div class='flex flex-col md:grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
+        {
+          images.map((image) => (
+            <div
+              class={`${image.class} relative overflow-hidden rounded-lg group transition-all duration-300 hover:shadow-md`}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                width={800}
+                height={600}
+                class='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
