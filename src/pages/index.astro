@@ -4,7 +4,12 @@ import Layout from '../layouts/Layout.astro'
 import Ig from '../components/ig.astro'
 import Fb from '../components/fb.astro'
 import Wpp from '../components/wpp.astro'
+import star from '../assets/star.svg'
+import phone from '../assets/phone.svg'
+import email from '../assets/email.svg'
+import location from '../assets/location.svg'
 
+const currentYear = new Date().getFullYear()
 const linkLocation =
   'https://www.google.es/maps/place/La+Arboleda+en+Carpinteria/@-32.3950068,-65.0057687,16z/data=!4m6!3m5!1s0x95d2e3220122fe8d:0x841412906b839df!8m2!3d-32.3950068!4d-65.0013913!16s%2Fg%2F11h21_28c7?hl=es&entry=ttu'
 ---
@@ -14,7 +19,7 @@ const linkLocation =
     class='min-h-screen flex flex-col items-center justify-center bg-white p-4 md:p-8'
   >
     <section class='w-full max-w-3xl mx-auto'>
-      <header class='mb-16 md:mb-24'>
+      <header class='mb-16 md:mb-24 flex items-center justify-between'>
         <div class='relative inline-block'>
           <h1 class='text-4xl md:text-6xl font-light tracking-tight'>
             La Arboleda
@@ -22,76 +27,290 @@ const linkLocation =
           <div class='absolute -bottom-2 left-0 w-full h-[2px] bg-[#d1272d]'>
           </div>
         </div>
-      </header>
-
-      <nav class='mb-16 md:mb-24'>
-        <ul
-          class='flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12'
-        >
-          <li>
-            <a
-              href='/about'
-              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href='/gallery'
-              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
-            >
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a
-              href={linkLocation}
-              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
-            >
-              Location
-            </a>
-          </li>
-          <li>
-            <a
-              href='/contact'
-              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <footer class='mt-auto'>
-        <section class='contBtns mt-10'>
-          <ul class='flex justify-center items-center gap-6'>
-            <li>
-              <a href='https://wa.link/o1g51t' class='wpp hover:opacity-50'>
-                <Wpp />
-              </a>
-            </li>
-
+        <nav>
+          <ul
+            class='flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12'
+          >
             <li>
               <a
-                href='https://www.instagram.com/laarboledaen/'
-                class='ig hover:opacity-50'
+                href='/gallery'
+                class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
               >
-                <Ig />
+                Gallery
               </a>
             </li>
-
             <li>
               <a
-                href='https://www.facebook.com/laarboledaencarpinteria'
-                class='fb hover:opacity-50'
+                href={linkLocation}
+                target='_blank'
+                class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
               >
-                <Fb />
+                Location
+              </a>
+            </li>
+            <li>
+              <a
+                href='/contact'
+                class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
+              >
+                Contact
               </a>
             </li>
           </ul>
+        </nav>
+      </header>
+
+      <article class='min-h-screen bg-white p-2 md:p-8'>
+        <section class='mb-16 space-y-6 text-lg leading-relaxed'>
+          <p>
+            <span class='font-medium text-[#d1272d]'
+              >La Arboleda en Carpintería</span
+            > posee dos unidades vacacionales en un predio de 2500 metros cuadrados,
+            rodeado por el entorno natural de la Sierra de los Comechingones.
+          </p>
+          <p>
+            Estás cabañas son el refugio perfecto para aquellos que buscan
+            escapar del bullicio de la ciudad y sumergirse en la serenidad,
+            rodeadas de naturaleza y con la imponente presencia de las Sierras
+            de los Comechingones como telón de fondo, te espera una experiencia
+            inolvidable en Carpintería, San Luis.
+          </p>
         </section>
-      </footer>
+
+        <section class='mb-16'>
+          <div class='relative inline-block mb-10'>
+            <h2 class='text-2xl md:text-3xl font-light tracking-tight'>
+              Opiniones
+            </h2>
+            <div class='absolute -bottom-2 left-0 w-full h-[1px] bg-[#d1272d]'>
+            </div>
+          </div>
+
+          <article class='grid md:grid-cols-2 gap-8'>
+            <div class='border-b border-gray-100 pb-6'>
+              <div class='flex justify-between items-center mb-2'>
+                <h3 class='font-medium text-lg'>Julia Vagni</h3>
+                <div class='flex'>
+                  {
+                    [...Array(5)].map((_, i) => (
+                      <img
+                        src={star.src}
+                        alt='Star icon'
+                        class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+              <p class='italic'>
+                "Excelente cabaña para ir en familia, la pileta está bárbara.
+                Impecable todo."
+              </p>
+            </div>
+
+            <div class='border-b border-gray-100 pb-6'>
+              <div class='flex justify-between items-center mb-2'>
+                <h3 class='font-medium text-lg'>Victor Magnarelli</h3>
+                <div class='flex'>
+                  {
+                    [...Array(4)].map((_, i) => (
+                      <img
+                        src={star.src}
+                        alt='Star icon'
+                        class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+              <p class='italic'>"Excelente lugar! todo de 10!"</p>
+            </div>
+
+            <div class='border-b border-gray-100 pb-6'>
+              <div class='flex justify-between items-center mb-2'>
+                <h3 class='font-medium text-lg'>Jesica Paula</h3>
+                <div class='flex'>
+                  {
+                    [...Array(5)].map((_, i) => (
+                      <img
+                        src={star.src}
+                        alt='Star icon'
+                        class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+              <p class='italic'>"Súper recomendable para ir con la familia."</p>
+            </div>
+
+            <div class='border-b border-gray-100 pb-6'>
+              <div class='flex justify-between items-center mb-2'>
+                <h3 class='font-medium text-lg'>Leo Fuentes</h3>
+                <div class='flex'>
+                  {
+                    [...Array(4)].map((_, i) => (
+                      <img
+                        src={star.src}
+                        alt='Star icon'
+                        class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+              <p class='italic'>
+                "Excelente lugar ... una vista increíble de la sierra!!"
+              </p>
+            </div>
+
+            <div class='border-b border-gray-100 pb-6'>
+              <div class='flex justify-between items-center mb-2'>
+                <h3 class='font-medium text-lg'>Gustavo Cervilla</h3>
+                <div class='flex'>
+                  {
+                    [...Array(5)].map((_, i) => (
+                      <img
+                        src={star.src}
+                        alt='Star icon'
+                        class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+              <p class='italic'>"Total tranquilidad y sociego"</p>
+            </div>
+
+            <div class='border-b border-gray-100 pb-6'>
+              <div class='flex justify-between items-center mb-2'>
+                <h3 class='font-medium text-lg'>Javier Alvarez</h3>
+                <div class='flex'>
+                  {
+                    [...Array(4)].map((_, i) => (
+                      <img
+                        src={star.src}
+                        alt='Star icon'
+                        class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+              <p class='italic'>
+                "Excelente lugar, para disfrutar y descansar."
+              </p>
+            </div>
+          </article>
+        </section>
+      </article>
     </section>
+    <footer class='bg-white border-t border-gray-100 pt-12 pb-6'>
+      <div class='max-w-7xl mx-auto px-4 md:px-8'>
+        <div class='grid grid-cols-1 md:grid-cols-4 gap-8 mb-12'>
+          <div class='md:col-span-1'>
+            <div class='relative inline-block mb-4'>
+              <h3 class='text-2xl font-light tracking-tight'>La Arboleda</h3>
+              <div class='absolute -bottom-1 left-0 w-12 h-[2px] bg-[#d1272d]'>
+              </div>
+            </div>
+            <p class='text-gray-600 text-sm mb-4'>
+              Cabañas en Carpintería, San Luis. Un refugio de tranquilidad
+              rodeado por la naturaleza de las Sierras de los Comechingones.
+            </p>
+            <div class='flex space-x-4'>
+              <a
+                href='https://api.whatsapp.com/send?phone=542214556906'
+                class='text-gray-500 hover:text-[#d1272d] transition-colors duration-300'
+                aria-label='WhatsApp'
+              >
+                <Wpp />
+              </a>
+              <a
+                href='https://www.instagram.com/laarboledaen/'
+                class='text-gray-500 hover:text-[#d1272d] transition-colors duration-300'
+                aria-label='Instagram'
+              >
+                <Ig />
+              </a>
+              <a
+                href='https://web.facebook.com/laarboledaencarpinteria'
+                class='text-gray-500 hover:text-[#d1272d] transition-colors duration-300'
+                aria-label='Messenger'
+              >
+                <Fb />
+              </a>
+            </div>
+          </div>
+
+          <div class='md:col-span-1'>
+            <h4 class='font-medium text-lg mb-4'>Enlaces rápidos</h4>
+            <ul class='space-y-2'>
+              <li>
+                <a
+                  href='/'
+                  class='text-gray-600 hover:text-[#d1272d] transition-colors duration-300'
+                >
+                  Sobre nosotros
+                </a>
+              </li>
+              <li>
+                <a
+                  href='/gallery'
+                  class='text-gray-600 hover:text-[#d1272d] transition-colors duration-300'
+                >
+                  Galería
+                </a>
+              </li>
+              <li>
+                <a
+                  href='/contact'
+                  class='text-gray-600 hover:text-[#d1272d] transition-colors duration-300'
+                >
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class='md:col-span-1'>
+            <h4 class='font-medium text-lg mb-4'>Contacto</h4>
+            <ul class='space-y-3'>
+              <li class='flex items-start'>
+                <img
+                  src={location.src}
+                  class='w-5 h-5 text-[#d1272d] mt-0.5 mr-2 flex-shrink-0'
+                />
+                <span class='text-gray-600 text-sm'
+                  >Carpintería, San Luis, Argentina</span
+                >
+              </li>
+              <li class='flex items-center'>
+                <img
+                  src={phone.src}
+                  class='w-5 h-5 text-[#d1272d] mr-2 flex-shrink-0'
+                />
+                <span class='text-gray-600 text-sm'>+54 9 221 455-6906</span>
+              </li>
+              <li class='flex items-center'>
+                <img
+                  src={email.src}
+                  class='w-5 h-5 text-[#d1272d] mr-2 flex-shrink-0'
+                />
+                <span class='text-gray-600 text-sm'>info@laarboleda.com</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class='border-gray-100 pt-6 mt-6'>
+            <div class='flex flex-col md:flex-row justify-between items-center'>
+              <p class='text-gray-500 text-sm mb-4 md:mb-0'>
+                &copy; {currentYear} La Arboleda. Todos los derechos reservados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </main>
 </Layout>
