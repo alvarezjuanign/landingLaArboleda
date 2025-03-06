@@ -1,11 +1,97 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import '../styles/global.css'
+import Layout from '../layouts/Layout.astro'
+import Ig from '../components/ig.astro'
+import Fb from '../components/fb.astro'
+import Wpp from '../components/wpp.astro'
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const linkLocation =
+  'https://www.google.es/maps/place/La+Arboleda+en+Carpinteria/@-32.3950068,-65.0057687,16z/data=!4m6!3m5!1s0x95d2e3220122fe8d:0x841412906b839df!8m2!3d-32.3950068!4d-65.0013913!16s%2Fg%2F11h21_28c7?hl=es&entry=ttu'
 ---
 
-<Layout>
-	<Welcome />
+<Layout title='La Arboleda'>
+  <main
+    class='min-h-screen flex flex-col items-center justify-center bg-white p-4 md:p-8'
+  >
+    <section class='w-full max-w-3xl mx-auto'>
+      <header class='mb-16 md:mb-24'>
+        <div class='relative inline-block'>
+          <h1 class='text-4xl md:text-6xl font-light tracking-tight'>
+            La Arboleda
+          </h1>
+          <div class='absolute -bottom-2 left-0 w-full h-[2px] bg-[#d1272d]'>
+          </div>
+        </div>
+      </header>
+
+      <nav class='mb-16 md:mb-24'>
+        <ul
+          class='flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12'
+        >
+          <li>
+            <a
+              href='/about'
+              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href='/gallery'
+              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
+            >
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a
+              href={linkLocation}
+              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
+            >
+              Location
+            </a>
+          </li>
+          <li>
+            <a
+              href='/contact'
+              class='text-xl md:text-2xl font-medium hover:text-[#d1272d] transition-colors duration-300'
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <footer class='mt-auto'>
+        <section class='contBtns mt-10'>
+          <ul class='flex justify-center items-center gap-6'>
+            <li>
+              <a href='https://wa.link/o1g51t' class='wpp hover:opacity-50'>
+                <Wpp />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='https://www.instagram.com/laarboledaen/'
+                class='ig hover:opacity-50'
+              >
+                <Ig />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='https://www.facebook.com/laarboledaencarpinteria'
+                class='fb hover:opacity-50'
+              >
+                <Fb />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+  </main>
 </Layout>
