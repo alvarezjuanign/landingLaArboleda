@@ -1,0 +1,119 @@
+---
+import ig from '../assets/ig.svg'
+import fb from '../assets/fb.svg'
+import wpp from '../assets/wpp.svg'
+import phone from '../assets/phone.svg'
+import email from '../assets/email.svg'
+import location from '../assets/location.svg'
+---
+
+<footer class='bg-white border-t border-gray-100 pt-12 pb-6'>
+  <div class='max-w-7xl mx-auto px-4 md:px-8'>
+    <div class='grid grid-cols-1 md:grid-cols-4 gap-8 mb-12'>
+      <div class='md:col-span-1'>
+        <div class='relative inline-block mb-4'>
+          <h3 class='text-2xl font-light tracking-tight'>La Arboleda</h3>
+          <div class='absolute -bottom-1 left-0 w-12 h-[2px] bg-[#d1272d]'>
+          </div>
+        </div>
+        <p class='text-gray-600 text-sm mb-4'>
+          Cabañas en Carpintería, San Luis. Un refugio de tranquilidad rodeado
+          por la naturaleza de las Sierras de los Comechingones.
+        </p>
+        <div class='flex space-x-4'>
+          <a
+            href='https://api.whatsapp.com/send?phone=542214556906'
+            class='text-gray-500 hover:text-[#d1272d] transition-colors duration-300'
+            aria-label='WhatsApp'
+            target='_blank'
+          >
+            <img src={wpp.src} class='h-6' />
+          </a>
+          <a
+            href='https://www.instagram.com/laarboledaen/'
+            class='text-gray-500 hover:text-[#d1272d] transition-colors duration-300'
+            aria-label='Instagram'
+            target='_blank'
+          >
+            <img src={ig.src} class='h-6' />
+          </a>
+          <a
+            href='https://web.facebook.com/laarboledaencarpinteria'
+            target='_blank'
+            class='text-gray-500 hover:text-[#d1272d] transition-colors duration-300'
+            aria-label='Messenger'
+          >
+            <img src={fb.src} class='h-6' />
+          </a>
+        </div>
+      </div>
+
+      <div class='md:col-span-1'>
+        <h4 class='font-medium text-lg mb-4'>Enlaces rápidos</h4>
+        <ul class='space-y-2'>
+          <li>
+            <a
+              href='/'
+              class='text-gray-600 hover:text-[#d1272d] transition-colors duration-300'
+            >
+              Sobre nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              href='/gallery'
+              class='text-gray-600 hover:text-[#d1272d] transition-colors duration-300'
+            >
+              Galería
+            </a>
+          </li>
+          <li>
+            <a
+              href='/contact'
+              class='text-gray-600 hover:text-[#d1272d] transition-colors duration-300'
+            >
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class='md:col-span-1'>
+        <h4 class='font-medium text-lg mb-4'>Contacto</h4>
+        <ul class='space-y-3'>
+          <li class='flex items-start'>
+            <img
+              src={location.src}
+              class='w-5 h-5 text-[#d1272d] mt-0.5 mr-2 flex-shrink-0'
+            />
+            <span class='text-gray-600 text-sm'
+              >Carpintería, San Luis, Argentina</span
+            >
+          </li>
+          <li class='flex items-center'>
+            <img
+              src={phone.src}
+              class='w-5 h-5 text-[#d1272d] mr-2 flex-shrink-0'
+            />
+            <span class='text-gray-600 text-sm'>+54 9 221 455-6906</span>
+          </li>
+          <li class='flex items-center'>
+            <img
+              src={email.src}
+              class='w-5 h-5 text-[#d1272d] mr-2 flex-shrink-0'
+            />
+            <span class='text-gray-600 text-sm'>info@laarboleda.com</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class='border-gray-100 pt-6 mt-6'>
+        <div class='flex flex-col md:flex-row justify-between items-center'>
+          <p class='text-gray-500 text-sm mb-4 md:mb-0'>
+            &copy; {currentYear} La Arboleda. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
