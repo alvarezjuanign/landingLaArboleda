@@ -1,0 +1,125 @@
+---
+import star from '../assets/star.svg'
+---
+
+<section class='mb-16'>
+  <div class='relative inline-block mb-10'>
+    <h2 class='text-2xl md:text-3xl font-light tracking-tight'>Opiniones</h2>
+    <div class='absolute -bottom-2 left-0 w-full h-[1px] bg-[#d1272d]'></div>
+  </div>
+
+  <article class='grid md:grid-cols-2 gap-8'>
+    <div class='border-b border-gray-100 pb-6'>
+      <div class='flex justify-between items-center mb-2'>
+        <h3 class='font-medium text-lg'>Julia Vagni</h3>
+        <div class='flex'>
+          {
+            [...Array(5)].map((_, i) => (
+              <img
+                src={star.src}
+                alt='Star icon'
+                class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+              />
+            ))
+          }
+        </div>
+      </div>
+      <p class='italic'>
+        "Excelente cabaña para ir en familia, la pileta está bárbara. Impecable
+        todo."
+      </p>
+    </div>
+
+    <div class='border-b border-gray-100 pb-6'>
+      <div class='flex justify-between items-center mb-2'>
+        <h3 class='font-medium text-lg'>Victor Magnarelli</h3>
+        <div class='flex'>
+          {
+            [...Array(4)].map((_, i) => (
+              <img
+                src={star.src}
+                alt='Star icon'
+                class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+              />
+            ))
+          }
+        </div>
+      </div>
+      <p class='italic'>"Excelente lugar! todo de 10!"</p>
+    </div>
+
+    <div class='border-b border-gray-100 pb-6'>
+      <div class='flex justify-between items-center mb-2'>
+        <h3 class='font-medium text-lg'>Jesica Paula</h3>
+        <div class='flex'>
+          {
+            [...Array(5)].map((_, i) => (
+              <img
+                src={star.src}
+                alt='Star icon'
+                class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+              />
+            ))
+          }
+        </div>
+      </div>
+      <p class='italic'>"Súper recomendable para ir con la familia."</p>
+    </div>
+
+    <div class='border-b border-gray-100 pb-6'>
+      <div class='flex justify-between items-center mb-2'>
+        <h3 class='font-medium text-lg'>Leo Fuentes</h3>
+        <div class='flex'>
+          {
+            [...Array(4)].map((_, i) => (
+              <img
+                src={star.src}
+                alt='Star icon'
+                class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+              />
+            ))
+          }
+        </div>
+      </div>
+      <p class='italic'>
+        "Excelente lugar ... una vista increíble de la sierra!!"
+      </p>
+    </div>
+
+    <div class='border-b border-gray-100 pb-6'>
+      <div class='flex justify-between items-center mb-2'>
+        <h3 class='font-medium text-lg'>Gustavo Cervilla</h3>
+        <div class='flex'>
+          {
+            [...Array(5)].map((_, i) => (
+              <img
+                src={star.src}
+                alt='Star icon'
+                class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+              />
+            ))
+          }
+        </div>
+      </div>
+      <p class='italic'>"Total tranquilidad y sociego"</p>
+    </div>
+
+    <div class='border-b border-gray-100 pb-6'>
+      <div class='flex justify-between items-center mb-2'>
+        <h3 class='font-medium text-lg'>Javier Alvarez</h3>
+        <div class='flex'>
+          {
+            [...Array(4)].map((_, i) => (
+              <img
+                src={star.src}
+                alt='Star icon'
+                class='w-4 h-4 fill-[#d1272d] text-[#d1272d]'
+              />
+            ))
+          }
+        </div>
+      </div>
+      <p class='italic'>"Excelente lugar, para disfrutar y descansar."</p>
+    </div>
+  </article>
+</section>
