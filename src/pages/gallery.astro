@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import arrow from '../assets/arrow.svg'
+import arrow from '../assets/svg/arrow.svg'
+import Footer from '../components/footer.astro'
 
 import '../styles/global.css'
 
 const images = [
   {
-    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382012/zeiwhse3dhrriaje08py.webp',
-    alt: 'Vista de las cabañas',
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1741451225/pileta_hzakbg.webp',
+    alt: 'Vista de la pileta',
     class: 'col-span-2 row-span-2',
   },
   {
-    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382012/bpqjmmgqp0jzfj4mijur.webp',
-    alt: 'Vista de las cabañas',
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1741451224/parque_rvla2q.webp',
+    alt: 'Vista de el parque',
     class: 'col-span-1 row-span-2 md:row-span-4 lg:col-span-2',
   },
   {
@@ -51,7 +52,7 @@ const images = [
     class: 'col-span-2 row-span-1',
   },
   {
-    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382013/npldjwb3rpg8plpzkvxr.webp',
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382015/zwnihkaumrpao6jfllnj.webp',
     alt: 'Vista de la entrada a las cabañas',
     class: 'col-span-2 row-span-1',
   },
@@ -71,14 +72,14 @@ const images = [
     class: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382015/zwnihkaumrpao6jfllnj.webp',
+    src: 'https://res.cloudinary.com/ddmtmwlja/image/upload/v1741451224/entrada_xuhwni.webp',
     alt: 'Vista del parque de las cabañas',
     class: 'col-span-2 row-span-1 md:col-span-1 lg:col-span-3',
   },
 ]
 ---
 
-<Layout title='Gallery'>
+<Layout title='Galeria'>
   <div class='min-h-screen bg-white p-4 md:p-8'>
     <div class='max-w-7xl mx-auto'>
       <div class='mb-8'>
@@ -90,7 +91,7 @@ const images = [
       <header class='mb-12 md:mb-16 text-center'>
         <div class='relative inline-block'>
           <h1 class='text-4xl md:text-5xl font-light tracking-tight'>
-            Gallery
+            Galeria
           </h1>
           <div class='absolute -bottom-2 left-0 w-full h-[2px] bg-[#d1272d]'>
           </div>
@@ -116,4 +117,5 @@ const images = [
       </div>
     </div>
   </div>
+  <Footer />
 </Layout>
