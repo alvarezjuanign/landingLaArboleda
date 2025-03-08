@@ -3,6 +3,7 @@ import '../styles/global.css'
 import Layout from '../layouts/Layout.astro'
 import Comments from '../components/comments.astro'
 import Footer from '../components/footer.astro'
+import menu from '../assets/svg/menu.svg'
 
 const linkLocation =
   'https://www.google.es/maps/place/La+Arboleda+en+Carpinteria/@-32.3950068,-65.0057687,16z/data=!4m6!3m5!1s0x95d2e3220122fe8d:0x841412906b839df!8m2!3d-32.3950068!4d-65.0013913!16s%2Fg%2F11h21_28c7?hl=es&entry=ttu'
@@ -22,8 +23,15 @@ const linkLocation =
           </div>
         </div>
         <nav>
+          <button
+            class='md:hidden p-2 rounded-lg absolute top-5 right-4'
+            aria-label='Abrir menú'
+            onclick='document.querySelector("ul").classList.toggle("hidden")'
+          >
+            <img src={menu.src} alt='Menú' class='h-6' />
+          </button>
           <ul
-            class='flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12'
+            class='md:flex hidden md:flex-row space-y-6 md:space-y-0 md:space-x-12 absolute top-16 right-4 md:static bg-white p-4 md:p-0 rounded-lg shadow-lg transition-all duration-300'
           >
             <li>
               <a
@@ -76,13 +84,15 @@ const linkLocation =
           </p>
         </section>
 
-        <section class='mb-10 text-lg leading-relaxed flex items-center gap-2'>
+        <section
+          class='mb-10 text-lg leading-relaxed flex flex-col md:flex-row md:items-center gap-2'
+        >
           <img
             src='https:res.cloudinary.com/ddmtmwlja/image/upload/v1699382012/bpqjmmgqp0jzfj4mijur.webp'
             alt='Fachada de una de las cabañas del complejo'
-            class='h-96 object-cover rounded-lg w-1/2'
+            class='h-96 object-cover rounded-lg md:w-1/2'
           />
-          <div class='h-96 w-1/2 flex flex-col justify-between'>
+          <div class='h-96 md:w-1/2 flex flex-col justify-between'>
             <p>
               Nuestras cabañas
               <span class='font-medium text-[#d1272d]'
@@ -94,7 +104,7 @@ const linkLocation =
             <img
               src='https://res.cloudinary.com/ddmtmwlja/image/upload/v1699382012/zeiwhse3dhrriaje08py.webp'
               alt='Fachada de la cabaña con sillas en el exterior'
-              class='md:w-full object-cover aspect-auto rounded-lg w-1/2'
+              class='md:w-full object-cover aspect-auto rounded-lg'
             />
           </div>
         </section>
