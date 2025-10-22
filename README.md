@@ -1,4 +1,5 @@
-#Proyecto Landing page
+# Proyecto Landing page
+
 Landing page desarrollada con React y TailwindCSS. Incluye transiciones suaves entre vistas para mejorar la experiencia del usuario y un diseño moderno y responsive.
 
 Características principales
