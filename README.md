@@ -16,14 +16,14 @@
 ### Prerequisites
 - NodeJs
 - Pnpm
-- 
+
 <hr/>
 
 ## Installation
 Clone the repository and navigate to the project directory:
 ```
 bash
-git clone [https://github.com/alvarezjuanign/landingLaArboleda.git](https://github.com/alvarezjuanign/landingLaArboleda.git)
+git clone https://github.com/alvarezjuanign/landingLaArboleda.git
 cd landingLaArboleda
 ```
 
