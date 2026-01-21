@@ -1,13 +1,49 @@
 # Proyecto Landing page
 
-Landing page desarrollada con React y TailwindCSS. Incluye transiciones suaves entre vistas para mejorar la experiencia del usuario y un diseño moderno y responsive. </br>
+<hr/>
 
-Características principales: </br>
+## Screenshots
+<img width="1853" height="999" alt="image" src="https://github.com/user-attachments/assets/af1f181a-1af9-4169-a382-36e2f64e1681" />
 
-- View Transitions: Transiciones suaves entre vistas para mejorar la experiencia del usuario. </br>
-- Responsive Design: Diseño adaptable a diferentes tamaños de pantalla. </br>
+## Features: </br>
+- View Transitions: Smooth transitions between views using View Transitions API for an enhanced UX. </br>
+- Responsive Design: Optimized for a seamless experience on mobile, tablets, and desktops. </br>
+
+<hr/>
+
+## Getting Started
+
+### Prerequisites
+- NodeJs
+- Pnpm
+- 
+<hr/>
+
+## Installation
+Clone the repository and navigate to the project directory:
+```
+bash
+git clone [https://github.com/alvarezjuanign/landingLaArboleda.git](https://github.com/alvarezjuanign/landingLaArboleda.git)
+cd landingLaArboleda
+```
+
+Install the dependencies:
+```
+bash
+pnpm install
+```
+
+Run the project:
+```
+bash
+pnpm run dev
+```
+
+Open your browser and navigate to:
+```
+http://localhost:4321/
+```
 
 Tecnologías utilizadas </br>
-
-- Astro: Framework para construir sitios web rápidos y modernos. </br>
-- Tailwind CSS: Biblioteca de estilos utilitarios para diseño responsivo. </br>
+<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1700142580/ddvpqqnwpxuzfo55db8v.svg" width="50">
+<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1692310460/lk9bc1j0rlwyjlx0aggq.svg" width="50">
