@@ -1,4 +1,5 @@
-# Proyecto Landing page
+# Landing page
+
 
 ## Screenshots
 <img width="1853" height="999" alt="image" src="https://github.com/user-attachments/assets/af1f181a-1af9-4169-a382-36e2f64e1681" />
