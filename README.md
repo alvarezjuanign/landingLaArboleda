@@ -1,7 +1,5 @@
 # Proyecto Landing page
 
-<hr/>
-
 ## Screenshots
 <img width="1853" height="999" alt="image" src="https://github.com/user-attachments/assets/af1f181a-1af9-4169-a382-36e2f64e1681" />
 
@@ -44,6 +42,6 @@ Open your browser and navigate to:
 http://localhost:4321/
 ```
 
-Tecnologías utilizadas </br>
-<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1700142580/ddvpqqnwpxuzfo55db8v.svg" width="50">
-<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1692310460/lk9bc1j0rlwyjlx0aggq.svg" width="50">
+Tecnologías utilizadas: </br>
+<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1700142580/ddvpqqnwpxuzfo55db8v.svg" width="30">
+<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1692310460/lk9bc1j0rlwyjlx0aggq.svg" width="30">
