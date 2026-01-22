@@ -43,6 +43,6 @@ Open your browser and navigate to:
 http://localhost:4321/
 ```
 
-Tecnologías utilizadas: </br>
-<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1700142580/ddvpqqnwpxuzfo55db8v.svg" width="30">
-<img src="https://res.cloudinary.com/ddmtmwlja/image/upload/v1692310460/lk9bc1j0rlwyjlx0aggq.svg" width="30">
+Tecnologías utilizadas: </br></br>
+![Astro](https://img.shields.io/badge/astro-%230D1117.svg?style=for-the-badge&logo=astro&logoColor=white)</br>
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
